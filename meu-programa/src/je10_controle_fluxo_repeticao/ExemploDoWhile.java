@@ -13,7 +13,7 @@ public class ExemploDoWhile {
         if (numeroTentativas < 5){
             System.out.println("Alô!!!");
         }else {
-            System.out.println("Não atendeu");
+            System.out.println("Não atendeu...");
         }
     }
 
