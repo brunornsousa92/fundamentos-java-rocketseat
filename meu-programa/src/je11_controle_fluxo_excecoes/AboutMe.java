@@ -8,8 +8,21 @@ public class AboutMe {
         // Criando o objeto scanner
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
 
-        System.out.println("Digite seu nome");
-        String nome = scanner.next();
+        try {
+            System.out.println("Digite seu nome");
+            String nome = scanner.next();
+
+            if (nome.isEmpty()) {
+                throw new IllegalArgumentException("O nome não pode estar vazio.");
+            }
+
+            System.out.println("Nome digitado: " + nome);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            scanner.close();
+        }
+
 
         System.out.println("Digite seu sobrenome");
         String sobrenome = scanner.next();
