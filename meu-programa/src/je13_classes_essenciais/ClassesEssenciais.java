@@ -1,5 +1,7 @@
 package je13_classes_essenciais;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class ClassesEssenciais {
@@ -69,21 +71,40 @@ public class ClassesEssenciais {
         //.2 ->     quer dizer que serão dois dígitos decimais
         //,.2 ->    quer dizer que serão dois dígitos decimais e informando o (.) de milhar
 
-        String nome = "Bruno";
-        nome = nome.concat(" Sousa");
-        nome = nome.concat(" sou Desenvolvedor");
+//        String nome = "Bruno";
+//        nome = nome.concat(" Sousa");
+//        nome = nome.concat(" sou Desenvolvedor");
+//
+//        System.out.println(nome);
+//
+//        StringBuilder sb = new StringBuilder();
+//        sb.append("Bruno");
+//        sb.append(" Sousa");
+//        sb.append(" sou Desenvolvedor");
+//
+//        System.out.println(sb);
 
-        System.out.println(nome);
+//        BigDecimal zero = BigDecimal.ZERO;
+//        BigDecimal resultado = zero.add(new BigDecimal("100"));
+//        resultado = resultado.subtract(new BigDecimal("27.5"));
+//        System.out.println(resultado);
+//        BigDecimal dez = BigDecimal.TEN;
+//
+//        BigDecimal decimal = BigDecimal.valueOf(1234.5678);
+//        BigDecimal numeroString = new BigDecimal("1234.5678");
 
-        StringBuilder sb = new StringBuilder();
-        sb.append("Bruno");
-        sb.append(" Sousa");
-        sb.append(" sou Desenvolvedor");
+//        BigDecimal divisor = BigDecimal.valueOf(3);
+//        BigDecimal resultado = BigDecimal.TEN.divide(divisor, 2, RoundingMode.HALF_EVEN);
+//        System.out.println(resultado);
 
-        System.out.println(sb);
+        BigDecimal precoLitro = BigDecimal.valueOf(5.799);
+        BigDecimal litrosUtilizados = BigDecimal.valueOf(21.752);
+        BigDecimal valorPagar = litrosUtilizados.multiply(precoLitro);
+        System.out.println(valorPagar);
 
-
-
+        // Arredondamento
+        BigDecimal valorPagarArredondado = valorPagar.setScale(2, RoundingMode.HALF_EVEN);
+        System.out.println(valorPagarArredondado);
 
 
     }
