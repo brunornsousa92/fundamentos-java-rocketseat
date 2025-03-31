@@ -7,5 +7,13 @@ public class ComputadorBruninho {
         msnMessenger.recebendoMensagem();
 //        msnMessenger.validarConectadoInternet();
 //        msnMessenger.salvarHistoricoMensagem();
+
+        FacebookMessenger facebookMessenger = new FacebookMessenger();
+        facebookMessenger.enviarMensagem();
+        facebookMessenger.recebendoMensagem();
+
+        Telegram telegram = new Telegram();
+        telegram.enviarMensagem();
+        telegram.recebendoMensagem();
     }
 }
